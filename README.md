@@ -1,6 +1,6 @@
-## About
-
 This is a [Vim](http://vim.org) syntax file for [i3](http://i3wm.org/) config file.
+
+![Screenshot](http://ompldr.org/vZndvNg/i3-vim-syntax.png)
 
 ## Using it
 
