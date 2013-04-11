@@ -22,7 +22,7 @@ syn match   i3QuotedString '"[^"]\+"' contained
 syn cluster i3String contains=i3SimpleString,i3QuotedString
 
 " Config commands
-syn keyword i3ConfigCommand bind bindcode bindsym assign new_window popup_during_fullscreen font floating_modifier default_orientation workspace_layout for_window focus_folows_mouse bar position colors output tray_output workspace_buttons
+syn keyword i3ConfigCommand bind bindcode bindsym assign new_window popup_during_fullscreen font floating_modifier floating_minimum_size floating_maximum_size default_orientation workspace_layout for_window focus_folows_mouse bar position colors output tray_output workspace_buttons
 syn match   i3IpcSocket "ipc-socket" nextgroup=@i3String skipwhite
 
 " Command keywords
@@ -54,7 +54,7 @@ syn keyword i3ModeKeyword mode nextgroup=@i3String skipwhite
 
 " Comments
 syn keyword i3Todo contained TODO FIXME XXX NOTE
-syn match   i3Comment "#.*$" contains=i3Todo
+syn match   i3Comment "^\s*#.*$" contains=i3Todo
 
 " Error (at end of line)
 syn match i3Error ".*$" contained
