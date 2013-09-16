@@ -27,7 +27,7 @@ syn match   i3IpcSocket "ipc-socket" nextgroup=@i3String skipwhite
 
 " Command keywords
 syn keyword i3Command exit reload restart kill fullscreen global layout border focus move open split append_layout mark resize grow shrink restore show
-syn keyword i3Param 1pixel default stacked tabbed normal none tiling stacking floating enable disable up down horizontal vertical up down left right parent child px or ppt leave_fullscreen toggle mode_toggle scratchpad width height top bottom client dock hide primary yes no all window container to
+syn keyword i3Param 1pixel default stacked tabbed normal none tiling stacking floating enable disable up down horizontal vertical both up down left right parent child px or ppt leave_fullscreen toggle mode_toggle scratchpad width height top bottom client dock hide primary yes no all window container to
 syn keyword i3WsSpecialParam next prev
 
 " Exec commands
