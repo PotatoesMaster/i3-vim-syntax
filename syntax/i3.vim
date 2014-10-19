@@ -27,12 +27,15 @@ syn match   i3IpcSocket "ipc[-_]socket" nextgroup=@i3String skipwhite
 
 " Command keywords
 syn keyword i3Command exit reload restart kill fullscreen global layout border focus move open split append_layout mark unmark resize grow shrink show nop rename
-syn keyword i3Param 1pixel default stacked tabbed normal none tiling stacking floating enable disable up down horizontal vertical auto up down left right parent child px or ppt leave_fullscreen toggle mode_toggle scratchpad width height top bottom client hide primary yes all active window container to absolute center on off x ms h v smart ignore pixel splith splitv output
+syn keyword i3Param 1pixel default stacked tabbed normal none tiling stacking floating enable disable up down horizontal vertical auto up down left right parent child px or ppt leave_fullscreen toggle mode_toggle scratchpad width height top bottom client hide primary yes all active window container to absolute center on off x ms h v smart ignore pixel splith splitv output true
 syn match   i3DashedParam '--release' skipwhite
 syn match   i3NoStartupId '--no-startup-id' contained
 syn keyword i3WsSpecialParam next prev next_on_output prev_on_output back_and_forth current number
 syn keyword i3BordersSpecialParam none vertical horizontal both
 syn keyword i3ModeParam dock hide invisible skipwhite
+
+" these are not keywords but we add them for consistency
+syn keyword i3PseudoParam no false inactive
 
 " Exec commands
 syn region  i3ExecCommand keepend start='[^ \t]' end='$\|;' contained contains=i3ChainDelimiter,i3Var,i3NoStartupId
@@ -82,6 +85,7 @@ highlight link i3QuotedExecCommand    Special
 highlight link i3StatusCommand        Special
 
 highlight link i3Param                Constant
+highlight link i3PseudoParam          Constant
 highlight link i3DashedParam          Constant
 highlight link i3NoStartupId          Constant
 highlight link i3Color1st             Constant
