@@ -64,6 +64,12 @@ syn keyword i3WsSpecialParam next prev next_on_output prev_on_output back_and_fo
 syn keyword i3BordersConfigCommand hide_edge_borders nextgroup=i3BordersSpecialParam skipwhite
 syn keyword i3BordersSpecialParam none vertical horizontal both
 
+" Criteria
+" TODO: allow Criteria only at specific places (before commands and as an argument of for_window)
+syn region  i3Criteria start='\[' end='\]' contains=i3CriterionKeyword oneline nextgroup=@i3Command
+syn keyword i3CriterionKeyword class instance window_role con_id id window_type con_mark title urgent workspace contained nextgroup=i3Equal
+syn match   i3Equal '=' contained nextgroup=@i3String
+
 " these are not keywords but we add them for consistency
 " TODO: need to be contained
 syn keyword i3PseudoParam no false inactive
@@ -119,6 +125,7 @@ highlight link i3Var                  Identifier
 highlight link i3SetVar               Identifier
 
 highlight link i3KeyModifier          Function
+highlight link i3CriterionKeyword     Type
 
 highlight link i3SimpleString         String
 highlight link i3QuotedString         String
