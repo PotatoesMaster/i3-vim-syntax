@@ -49,6 +49,9 @@ syn keyword i3StatusCommandKeyword status_command nextgroup=i3StatusCommand skip
 " Font statement
 syn keyword i3FontStatement font nextgroup=@i3String skipwhite
 
+" Separator symbol
+syn keyword i3SeparatorSymbol separator_symbol nextgroup=@i3String skipwhite
+
 " Set statement
 syn match   i3SetVar "\$\w\+" contained nextgroup=@i3String skipwhite
 syn keyword i3SetKeyword set nextgroup=i3SetVar skipwhite
@@ -118,6 +121,7 @@ highlight link i3IpcSocket            Define
 highlight link i3SetKeyword           Define
 highlight link i3ModeKeyword          Define
 highlight link i3FontStatement        Define
+highlight link i3SeparatorSymbol      Define
 highlight link i3StatusCommandKeyword Define
 highlight link i3BordersConfigCommand Define
 
