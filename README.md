@@ -1,3 +1,8 @@
+:warning: *This syntax file is not maintained anymore. Feel free to take over or try some alternative
+(eg: [i3config.vim](https://github.com/mboughaba/i3config.vim)).*
+
+---
+
 This is a [Vim](http://vim.org) syntax file for [i3](http://i3wm.org/) config file.
 
 ![Screenshot](https://raw.githubusercontent.com/PotatoesMaster/i3-vim-syntax/junk/screenshot.png)
